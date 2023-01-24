@@ -1,7 +1,7 @@
-package com.example.openfeign.controller;
+package com.example.resttemplate.controller;
 
-import com.example.openfeign.proxy.PaymentsProxy;
-import com.example.openfeign.model.Payment;
+import com.example.resttemplate.model.Payment;
+import com.example.resttemplate.proxy.PaymentsProxy;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +19,6 @@ public class PaymentController {
 
     @PostMapping("/payment")
     public Payment createPayment(@RequestBody Payment payment) {
-        String requestId = UUID.randomUUID().toString();
-        return paymentsProxy.createPayment(requestId, payment);
+        return paymentsProxy.createPayment(payment);
     }
 }

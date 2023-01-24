@@ -1,6 +1,6 @@
 package com.example.openfeign.proxy;
 
-import model.Payment;
+import com.example.openfeign.model.Payment;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

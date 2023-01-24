@@ -1,4 +1,4 @@
-package model;
+package com.example.openfeign.model;
 
 import lombok.Getter;
 import lombok.Setter;
